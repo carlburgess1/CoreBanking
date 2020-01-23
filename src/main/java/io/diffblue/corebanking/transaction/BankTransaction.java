@@ -74,7 +74,7 @@ public class BankTransaction extends Transaction {
       this.sourceAcc.takeFromBalance(this.getTransactionAmount());
       this.targetAcc.addToBalance(this.getTransactionAmount());
       this.setAccountBalanceAfterTransaction(this.targetAcc.getCurrentBalance());
-      this.markTransactionAsExecuted();
+      //this.markTransactionAsExecuted();
     } catch (AccountException e) {
       e.printStackTrace();
       this.setAccountBalanceAfterTransaction(this.targetAcc.getCurrentBalance());
